@@ -3,3 +3,5 @@ build/
 shuild
 *.exe
 *.old
+*.log
+ignore*
