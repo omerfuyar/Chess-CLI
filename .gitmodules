@@ -4,3 +4,6 @@
 [submodule "dependencies/shuild"]
 	path = dependencies/shuild
 	url = https://github.com/omerfuyar/shuild
+[submodule "dependencies/shunei"]
+	path = dependencies/shunei
+	url = https://github.com/omerfuyar/shunei
