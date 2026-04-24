@@ -14,6 +14,7 @@ int main(int argc, char **argv)
     if (argc > 1) // debug
     {
         SHU_CompilerAddFlags(SHUM_FLAGS_WARNING_HIGH SHUM_FLAGS_DEBUG);
+        SHU_CompilerAddFlags("-Wno-missing-declarations");
         // SHU_CompilerAddFlags(SHUM_FLAGS_DEBUG SHUM_FLAGS_WARNING_ERROR " -Wno-missing-declarations -Wno-switch -Wno-format-truncation -Wno-unused-function -DDEBUG -Wno-format-nonliteral");
     }
     else // release
