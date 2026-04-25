@@ -3,6 +3,8 @@
 
 int main(int argc, char **argv)
 {
+    renderBoard();
+
     if (argc < 2)
     {
         goto usageErr;
@@ -21,12 +23,13 @@ int main(int argc, char **argv)
 
     SHU_InitializeNetwork();
 
-    renderBoard();
+    waitKey();
 
     SHU_TerminateNetwork();
     return 0;
 
 usageErr:
     renderNotification("Usage is:\n\tapp <h/c>(mode, host/client)");
+    waitKey();
     return 1;
 }

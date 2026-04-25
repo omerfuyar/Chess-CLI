@@ -3,12 +3,23 @@
 #define BOARD_HORIZONTAL_BORDER '-'
 #define BOARD_VERTICAL_BORDER '|'
 
-#define PIECE_P "♙"
-#define PIECE_N "♘"
-#define PIECE_B "♗"
-#define PIECE_R "♖"
-#define PIECE_Q "♕"
-#define PIECE_K "♔"
+// borders inclusive
+#define NOTIFICATION_WIDTH 17
+#define NOTIFICATION_HEIGHT 5
+
+#define CELL_WIDTH 3
+#define CELL_HEIGHT 1
+
+#define BOARD_WIDTH ((8 * CELL_WIDTH) + 9)
+#define BOARD_HEIGHT ((8 * CELL_HEIGHT) + 9)
+
+#define PIECE_NONE ' '
+#define PIECE_PAWN "♙"
+#define PIECE_KNIGHT "♘"
+#define PIECE_BISHOP "♗"
+#define PIECE_ROOK "♖"
+#define PIECE_QUEEN "♕"
+#define PIECE_KING "♔"
 
 typedef enum ChessPiece : char
 {
