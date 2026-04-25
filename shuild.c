@@ -25,6 +25,12 @@ int main(int argc, char **argv)
     SHU_ModuleBegin("Chess-CLI", NULL);
     SHU_ModuleAddSourceFile("src/");
     SHU_ModuleAddIncludeDirectory("include/");
+    SHU_ModuleAddIncludeDirectory("dependencies/");
+
+#if SHUM_HOST_PLATFORM == SHUM_PLATFORM_WINDOWS
+    SHU_ModuleLinkLibrary("ws2_32");
+#endif
+
     SHU_ModuleCompile("build/", SHUM_MODULE_EXECUTABLE);
 
     return 0;
