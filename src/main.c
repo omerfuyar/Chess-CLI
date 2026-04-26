@@ -29,7 +29,7 @@ int main(int argc, char **argv)
     return 0;
 
 usageErr:
-    renderNotification("Usage is:\n\tapp <h/c>(mode, host/client)");
+    renderNotification("Usage is: ./Chess-CLI <h/c>(mode, host/client)");
     waitKey();
     return 1;
 }
