@@ -8,10 +8,12 @@
 #define CELL_WHITE_ATTRIBUTES SHUAttribute_ColorBGWhite
 #define CELL_BLACK_ATTRIBUTES SHUAttribute_ColorBrightBGBlack
 
-#define PIECE_WHITE_ATTRIBUTES SHUAttribute_ColorFGWhite
-#define PIECE_BLACK_ATTRIBUTES SHUAttribute_ColorFGBlack
+#define PIECE_WHITE_ATTRIBUTES SHUAttribute_ColorFGRed
+#define PIECE_BLACK_ATTRIBUTES SHUAttribute_ColorFGBlue
 
 #define NOTIFICATION_ATTRIBUTES SHUAttribute_ColorBGBlack, SHUAttribute_ColorBrightFGCyan
+
+static char *PIECES[] = {PIECE_NONE, PIECE_PAWN, PIECE_KNIGHT, PIECE_BISHOP, PIECE_ROOK, PIECE_QUEEN, PIECE_KING};
 
 void renderBoard()
 {
@@ -50,7 +52,7 @@ void renderBoard()
 
                 for (int c = 0; c < CELL_WIDTH; c++)
                 {
-                    SHU_TerminalPutCharacter(PIECE_NONE);
+                    SHU_TerminalPutCharacter(*PIECE_NONE);
                 }
 
                 SHU_TerminalSetAttributes(SHUAttribute_Reset);
@@ -112,7 +114,14 @@ void renderBoard()
 }
 
 void renderMove(ChessMove move)
-{
+{ // todo
+    int toX = move.toColumn * (CELL_WIDTH + 1) + (CELL_WIDTH / 2);
+    int toY = move.toRow * (CELL_HEIGHT + 1) + (CELL_HEIGHT / 2);
+
+    SHU_TerminalSetAttributes(SHUAttribute_Reset);
+    SHU_TerminalSetAttributes(move.piece <= ChessPiece_WKing ? PIECE_WHITE_ATTRIBUTES : PIECE_BLACK_ATTRIBUTES);
+    SHU_CursorSetPosition(toX, toY);
+    SHU_TerminalPutString("%s", PIECES[move.piece <= ChessPiece_WKing ? move.piece : move.piece - ChessPiece_BPawn + ChessPiece_WPawn]);
 }
 
 void renderNotification(const char *message)

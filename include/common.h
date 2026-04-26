@@ -14,29 +14,31 @@
 #define NOTIFICATION_HEIGHT 5          // 1 bottom border
 #define NOTIFICATION_MAX_LENGTH ((NOTIFICATION_WIDTH - 2) * (NOTIFICATION_HEIGHT - 2))
 
-#define PIECE_NONE ' '
-#define PIECE_PAWN "♙"
-#define PIECE_KNIGHT "♘"
-#define PIECE_BISHOP "♗"
-#define PIECE_ROOK "♖"
-#define PIECE_QUEEN "♕"
-#define PIECE_KING "♔"
+#define PIECE_NONE " "
+#define PIECE_PAWN "♟"
+#define PIECE_KNIGHT "♞"
+#define PIECE_BISHOP "♝"
+#define PIECE_ROOK "♜"
+#define PIECE_QUEEN "♛"
+#define PIECE_KING "♚"
 
 typedef enum ChessPiece : unsigned char
 {
     ChessPiece_None = 0,
-    ChessPiece_WPawn = 'p',
-    ChessPiece_BPawn = 'P',
-    ChessPiece_WKnight = 'n',
-    ChessPiece_BKnight = 'N',
-    ChessPiece_WBishop = 'b',
-    ChessPiece_BBishop = 'B',
-    ChessPiece_WRook = 'r',
-    ChessPiece_BRook = 'R',
-    ChessPiece_WQueen = 'q',
-    ChessPiece_BQueen = 'Q',
-    ChessPiece_WKing = 'k',
-    ChessPiece_BKing = 'K'
+
+    ChessPiece_WPawn,
+    ChessPiece_WKnight,
+    ChessPiece_WBishop,
+    ChessPiece_WRook,
+    ChessPiece_WQueen,
+    ChessPiece_WKing,
+
+    ChessPiece_BPawn,
+    ChessPiece_BKnight,
+    ChessPiece_BBishop,
+    ChessPiece_BRook,
+    ChessPiece_BQueen,
+    ChessPiece_BKing
 } ChessPiece;
 
 typedef struct ChessMove

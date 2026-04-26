@@ -23,6 +23,14 @@ int main(int argc, char **argv)
 
     SHU_InitializeNetwork();
 
+    renderMove((ChessMove){
+        .piece = ChessPiece_WKnight,
+        .fromRow = 0,
+        .fromColumn = 1,
+        .toRow = 2,
+        .toColumn = 2,
+    });
+
     waitKey();
 
     SHU_TerminateNetwork();
