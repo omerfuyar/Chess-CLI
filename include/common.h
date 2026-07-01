@@ -44,8 +44,8 @@ typedef enum ChessPiece : unsigned char
 typedef struct ChessMove
 {
     ChessPiece piece;
-    unsigned char fromRow;
-    unsigned char fromColumn;
-    unsigned char toRow;
-    unsigned char toColumn;
+    char fromRow;
+    char fromColumn;
+    char toRow;
+    char toColumn;
 } ChessMove;

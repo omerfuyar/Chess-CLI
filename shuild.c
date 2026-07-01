@@ -1,4 +1,4 @@
-#define SHUILD_IMPLEMENTATION
+#define SHU_IMPLEMENTATION
 #define SHUC_ENABLE_INCREMENTAL
 #define SHUC_NO_RUN_LOG
 #define SHUC_SHORT_LOG
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     SHU_ModuleLinkLibrary("ws2_32");
 #endif
 
-    SHU_ModuleCompile("build/", SHUM_MODULE_EXECUTABLE);
+    SHU_ModuleCompile("build/", SHUModuleType_Executable);
 
     return 0;
 }

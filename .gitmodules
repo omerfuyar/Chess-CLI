@@ -7,3 +7,9 @@
 [submodule "dependencies/shunei"]
 	path = dependencies/shunei
 	url = https://github.com/omerfuyar/shunei
+[submodule "dependencies/tscp"]
+	path = dependencies/tscp
+	url = https://github.com/terredeciels/TSCP
+[submodule "dependencies/shu"]
+	path = dependencies/shu
+	url = https://github.com/omerfuyar/shu.git

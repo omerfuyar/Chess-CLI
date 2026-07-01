@@ -114,7 +114,7 @@ void renderBoard()
 }
 
 void renderMove(ChessMove move)
-{ // todo
+{ //
     int toX = move.toColumn * (CELL_WIDTH + 1) + (CELL_WIDTH / 2);
     int toY = move.toRow * (CELL_HEIGHT + 1) + (CELL_HEIGHT / 2);
 
